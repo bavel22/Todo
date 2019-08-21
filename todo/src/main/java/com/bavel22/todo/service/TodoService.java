@@ -43,4 +43,8 @@ public class TodoService {
     return todos.remove(id);
 
     }
+
+    public Map<Long, Todo> getTodos() {
+        return todos;
+    }
 }

@@ -8,19 +8,24 @@ public class Todo {
     private String name = "";
     private String description = "";
 
+    private boolean complete = false;
+
     private State state;
 
     public Todo() {
-        //
+
     }
 
-    public Todo(String name, String description, Long id) {
+    public Todo(String name, String description, Long id, boolean complete) {
 
         this.id = id;
         this.name = name;
         this.description = description;
         this.state = State.NEW;
+        this.complete = complete;
     }
+
+
 
 
     public Todo(String name, String description) {
@@ -28,7 +33,9 @@ public class Todo {
         this.name = name;
         this.description = description;
         this.state = State.NEW;
+        this.complete = false;
     }
+
 
     public Long getId() {
 
@@ -55,6 +62,14 @@ public class Todo {
         this.description = description;
     }
 
+    public void setComplete(boolean complete) {
+        this.complete = complete;
+    }
+
+    public boolean getComplete() {
+        return complete;
+    }
+
     public State getState() {
         return state;
     }
@@ -67,9 +82,9 @@ public class Todo {
     public String toString() {
         return "Todo{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", name1='" + name + '\'' +
                 ", description='" + description + '\'' +
-                ", state=" + state +
+                ", complete=" + complete +
                 '}';
     }
 
