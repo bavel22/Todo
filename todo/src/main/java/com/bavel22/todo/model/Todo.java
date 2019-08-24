@@ -1,9 +1,14 @@
 package com.bavel22.todo.model;
 
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Objects;
 
-public class Todo {
+@Entity
 
+public class Todo {
+    @Id
     private Long id = 0L;
     private String name = "";
     private String description = "";

@@ -18,6 +18,8 @@ public class TodoService {
 
     public Todo create(Todo todo) {
 
+        //auto wire todo repository, then create methods in
+
         todo.setId((long) new Random().nextInt(100) + 1);
         todos.put(todo.getId(), todo);
 
